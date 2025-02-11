@@ -35,6 +35,9 @@ Yes! This is a **static website,** meaning it has no backend functionality—so 
 - This project is designed to work on **modern browsers** (Chrome, Firefox, Edge, Safari).  
 - Test your changes on multiple devices to ensure everything functions properly.  
 
+## Known Issues
+- GitHub Pages: Music Player controls are limited.
+
 ## **Please Credit Me ❤️**  
 If you use this code for your own site, I’d appreciate a small credit! You can do this by:  
 - **Linking back** to my original site: [critical.lol](https://critical.lol)  
