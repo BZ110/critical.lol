@@ -1,0 +1,334 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: 
+      radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.75) 70%, rgba(0, 0, 0, 1) 100%), 
+      url("./background.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .box {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3); /* Translucent white */
+    backdrop-filter: blur(10px); /* Blurry effect */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    border-radius: 15px;
+    box-shadow: 0 0 50px 25px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .box {
+    opacity: 0;
+    animation: fadeIn 0.75s ease-in forwards;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(22, 22, 22);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: rgb(65, 65, 65);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Social Buttons */
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .button img {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .twitter-btn {
+    background-color: #000000; /* X */
+  }
+  
+  .discord-btn {
+    background-color: #5865f2; /* Discord */
+  }
+  
+  .gmail-btn {
+    background-color: #d44638; /* Gmail */
+  }
+  
+  .github-btn {
+    background-color: #000000; /* GitHub black */
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: left 0.4s ease;
+    z-index: 1;
+  }
+  
+  .button:hover::before {
+    left: 0;
+  }
+  
+  .button:hover img {
+    filter: invert(1);
+  }
+  
+  .button:hover {
+    background-color: white;
+  }
+  
+  /* Notification styling */
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transform: translate(-50%, 50px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 1000;
+  }
+  
+  .notification.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  
+  .notification.fade-out {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  /* Music Player Styles */
+  .music-player {
+    background-color: #1a1a1a;  /* Dark dark gray-black background */
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;  /* Centers the component */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 360px;
+  }
+  
+  /* Artist Photo */
+  .music-player .artist-photo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Track Info & Title */
+  .music-player .track-info {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .music-player .track-title {
+    font-size: 18px;
+    margin: 0 0 2px;
+    font-family: 'Poppins', sans-serif;
+  }
+  /* Tiny artist description (hyperlinked) */
+  .music-player .track-artist {
+    font-size: 12px;
+    margin: 2px 0 5px;
+  }
+  .music-player .track-artist a {
+    color: #ccc;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+  }
+  .music-player .track-artist a:hover {
+    text-decoration-color: #fff;
+  }
+  
+  /* Progress Bar & Time Labels */
+  .music-player .progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  .music-player .progress-container .current-time,
+  .music-player .progress-container .total-time {
+    font-size: 14px;
+    width: 40px;
+    text-align: center;
+  }
+  .music-player .progress-container .progress-bar {
+    flex-grow: 1;
+    height: 4px;
+    background: #555;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+  .music-player .progress-container .progress-bar .progress {
+    height: 100%;
+    width: 0%;
+    background: #1db954;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Controls (Play/Pause & Volume) */
+  .music-player .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .music-player .play-pause-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+  }
+  .music-player .play-pause-btn .icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    color: #f0f0f0;
+  }
+  .music-player .play-pause-btn:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  /* Volume Controls */
+  .music-player .volume-container {
+    position: relative;
+  }
+  .music-player .volume-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #f0f0f0;
+  }
+  .music-player .volume-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Volume Slider: enhanced styling and always stays visible when hovered or focused */
+  .music-player .volume-slider {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 4px;
+    background-color: #333;
+    border: 1px solid #555;
+    z-index: 10;
+    /* Remove default styling */
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .music-player .volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #b34a4a;
+    cursor: pointer;
+    border: none;
+  }
+  .music-player .volume-container:hover .volume-slider,
+  .music-player .volume-slider:hover,
+  .music-player .volume-slider:focus {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  

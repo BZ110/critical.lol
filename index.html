@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>critical.lol</title>
+  <link rel="stylesheet" href="styles.css" class="stylesheet" />
+  <style>
+    /* Overlay Styles */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000; /* Black background */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+    #overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #start-button {
+      padding: 15px 30px;
+      font-size: 24px;
+      font-family: 'Roboto Mono', monospace; /* Robotic text look */
+      color: white;
+      background: #000;
+      border: 2px solid white; /* White-lined button */
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      z-index: 2;
+    }
+    
+    
+    #start-button:hover {
+      transform: scale(1.015);
+    }
+    /* Footer text in bottom left */
+    #footer-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 10px;
+      color: white;
+      z-index: 2;
+    }
+  </style>
+  <script src="./index.js"></script>
+  <script src="./music.js"></script>
+  <script>
+  </script>
+</head>
+<body>
+  <!-- Full-Screen Overlay with START Button and Footer -->
+  <div id="overlay">
+    <button id="start-button" onclick="startSite()">START</button>
+    <div id="footer-text">Made by Critical <3!</div>
+  </div>
+
+  <div class="box">
+    <img src="profile.gif" alt="Profile Picture" class="profile-pic" />
+    <h1 class="title">Critical <3</h1>
+    <p class="description">
+      Backend Developer
+    </p>
+
+    <!-- Music Player Component -->
+    <div class="music-player">
+      <img src="artist-photo.png" alt="Artist Photo" class="artist-photo" />
+      <div class="track-info">
+        <h2 class="track-title">Sunrise</h2>
+        <p class="track-artist">
+          <a href="https://youtube.com/@tangermusic" target="_blank">Tanger</a>
+        </p>
+        <div class="progress-container">
+          <span class="current-time">00:00</span>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <span class="total-time">00:00</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="play-pause-btn" onclick="togglePlayPause(0)">
+          <svg class="icon play-icon" width="64" height="64" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="16,12 16,52 48,32" />
+          </svg>
+          <svg class="icon pause-icon" width="64" height="64" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <rect x="16" y="12" width="10" height="40" />
+            <rect x="38" y="12" width="10" height="40" />
+          </svg>
+        </button>
+        <div class="volume-container">
+          <button class="volume-btn" onclick="toggleVolume()">
+            <svg class="volume-icon" width="64" height="64" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 24 L32 24 L40 16 L40 48 L32 40 L20 40 Z" />
+              <path d="M44 22 C48 26,48 38,44 42" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </button>
+          <input type="range" class="volume-slider" min="0" max="100" value="50" oninput="setVolume(this.value)" />
+        </div>
+      </div>
+      <!-- Hidden audio element -->
+      <audio id="audio-player" src="Sunrise.mp3"></audio>
+    </div>
+
+    <div class="social-buttons">
+      <a href="http://x.com/critical_on_x" class="button twitter-btn">
+        <img src="x-logo.svg" alt="Twitter" />
+      </a>
+      <a href="#" class="button discord-btn" onclick="copyDiscordID()">
+        <img src="discord-logo.svg" alt="Discord" />
+      </a>
+      <a href="mailto:inquiry@critical.lol" class="button gmail-btn">
+        <img src="gmail-logo.svg" alt="Gmail" />
+      </a>
+      <a href="https://github.com/bz110" class="button github-btn">
+        <img src="github-logo.svg" alt="GitHub" />
+      </a>
+    </div>
+  </div>
+</body>
+</html>
