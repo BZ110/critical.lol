@@ -1,4 +1,4 @@
-# [critical.lol](https://critical.lol) by Critical <3  
+# [https://critical.lol/](https://critical.lol) by Critical <3  
 
 ## **Overview**  
 This is the raw code for my personal website—a **carrd-like** minimalist site built entirely from scratch. It's designed to be simple, sleek, and easy to customize for anyone familiar with **HTML, CSS, and JavaScript.**  
