@@ -37,6 +37,7 @@ Yes! This is a **static website,** meaning it has no backend functionality—so 
 
 ## Known Issues
 - GitHub Pages: Music Player controls are limited.
+- Music player uses linear volume changing, I plan on making it an exponential function soon.
 
 ## **Please Credit Me ❤️**  
 If you use this code for your own site, I’d appreciate a small credit! You can do this by:  
