@@ -1,7 +1,7 @@
 # [https://critical.lol/](https://critical.lol) by Critical <3  
 
 ## **Overview**  
-This is the raw code for my personal website—a **carrd-like** minimalist site built entirely from scratch. It's designed to be simple, sleek, and easy to customize for anyone familiar with **HTML, CSS, and JavaScript.**  
+This is the raw code for my personal website—a **carrd-like** minimalist site built entirely from scratch. It's designed to be simple, sleek, and easy to customize for anyone!  
 
 ## **Features**  
 This site includes several cool features, such as:  
@@ -14,7 +14,7 @@ This site includes several cool features, such as:
 ## **How Customizable Is It?**  
 Everything in this project is fully customizable! As long as you have a basic understanding of **HTML, CSS, and JavaScript,** you’ll be able to modify it easily.  
 - Change the **profile picture** and **background** to your own.  
-- Replace the **social links** with your own.  
+- Replace the **social links** with your own: `personality.js`
 - Customize the **colors, fonts, and animations.**  
 - Modify the **music player** to use your own tracks.  
 
@@ -36,8 +36,8 @@ Yes! This is a **static website,** meaning it has no backend functionality—so 
 - Test your changes on multiple devices to ensure everything functions properly.  
 
 ## Known Issues
-- GitHub Pages: Music Player controls are limited.
-- Music player uses linear volume changing, I plan on making it an exponential function soon.
+- (Fixed) GitHub Pages: Music Player controls are limited.
+- (Fixed) Music player uses linear volume changing, I plan on making it an exponential function soon.
 
 ## **Please Credit Me ❤️**  
 If you use this code for your own site, I’d appreciate a small credit! You can do this by:  
