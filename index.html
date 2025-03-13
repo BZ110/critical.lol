@@ -54,8 +54,10 @@
       z-index: 2;
     }
   </style>
-  <script src="./index.js"></script>
-  <script src="./music.js"></script>
+  <script src="./personality.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/music.js"></script>
+  <script src="./scripts/put.js"></script>
   <script>
   </script>
 </head>
@@ -68,18 +70,18 @@
 
   <div class="box">
     <img src="profile.gif" alt="Profile Picture" class="profile-pic" />
-    <h1 class="title">Critical <3</h1>
-    <p class="description">
+    <h1 class="title" id="title">Critical <3</h1>
+    <p class="description" id="description">
       Backend Developer
     </p>
 
     <!-- Music Player Component -->
     <div class="music-player">
-      <img src="artist-photo.png" alt="Artist Photo" class="artist-photo" />
+      <img src="Placeholder" alt="Artist Photo" class="artist-photo" id="artist-photo" />
       <div class="track-info">
-        <h2 class="track-title">Sunrise</h2>
+        <h2 class="track-title" id="track-title">Placeholder</h2>
         <p class="track-artist">
-          <a href="https://youtube.com/@tangermusic" target="_blank">Tanger</a>
+          <a id="artist-credit" href="https://example.com" target="_blank">Placeholder</a>
         </p>
         <div class="progress-container">
           <span class="current-time">00:00</span>
@@ -90,7 +92,7 @@
         </div>
       </div>
       <div class="controls">
-        <button class="play-pause-btn" onclick="togglePlayPause(0)">
+        <button class="play-pause-btn" onclick="togglePlayPause()">
           <svg class="icon play-icon" width="64" height="64" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <polygon points="16,12 16,52 48,32" />
           </svg>
@@ -110,21 +112,21 @@
         </div>
       </div>
       <!-- Hidden audio element -->
-      <audio id="audio-player" src="Sunrise.mp3"></audio>
+      <audio id="audio-player" src="Placeholder"></audio>
     </div>
 
     <div class="social-buttons">
-      <a href="http://x.com/critical_on_x" class="button twitter-btn">
-        <img src="x-logo.svg" alt="Twitter" />
+      <a href="https://x.com/critical_on_x" class="button twitter-btn" id="twitter-btn">
+        <img src="x-logo.svg" alt="Twitter"/>
       </a>
       <a href="#" class="button discord-btn" onclick="copyDiscordID()">
-        <img src="discord-logo.svg" alt="Discord" />
+        <img src="discord-logo.svg" alt="Discord"/>
       </a>
-      <a href="mailto:inquiry@critical.lol" class="button gmail-btn">
-        <img src="gmail-logo.svg" alt="Gmail" />
+      <a href="mailto:inquiry@critical.lol" class="button gmail-btn" id="gmail-btn">
+        <img src="gmail-logo.svg" alt="Gmail"/>
       </a>
-      <a href="https://github.com/bz110" class="button github-btn">
-        <img src="github-logo.svg" alt="GitHub" />
+      <a href="https://github.com/bz110" class="button github-btn" id="github-btn">
+        <img src="github-logo.svg" alt="GitHub"/>
       </a>
     </div>
   </div>
