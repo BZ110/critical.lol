@@ -44,13 +44,10 @@ function showNotification(message) {
 // START button click: fade overlay, reveal content, and start audio.
 function startSite() {
   const overlay = document.getElementById('overlay');
+  addRandomParagraph();
   overlay.classList.add('hidden');
   setTimeout(() => {
     overlay.style.display = 'none';
     togglePlayPause(1); // Start playback after fade-out
   }, 1000); // Match the CSS transition duration.
 }
-
-window.addEventListener('load', () => {
-  addRandomParagraph();
-});
