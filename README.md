@@ -1,7 +1,7 @@
 # [https://critical.lol/](https://critical.lol) by Critical <3  
 
 ## **Overview**  
-This is the raw code for my personal website—a **carrd-like** minimalist site built entirely from scratch. It's designed to be simple, sleek, and easy to customize for anyone!  
+This is the raw code for my personal website, a **carrd-like** minimalist site built entirely from scratch. It's designed to be simple, sleek, and easy to customize for anyone!  
 
 ## **Features**  
 This site includes several cool features, such as:  
@@ -9,7 +9,7 @@ This site includes several cool features, such as:
 - **Background Music:** Music plays seamlessly while navigating the page.  
 - **Profile Photo & Background:** A custom avatar and backdrop for personalization.  
 - **Customizable Social Links:** Linked icons (SVGs) for platforms like GitHub, Discord, and X (Twitter).  
-- **Lightweight & Fast:** No backend, no heavy frameworks—just clean, fast-loading code.  
+- **Lightweight & Fast:** No backend, no heavy frameworks - just clean, fast-loading code.  
 
 ## **How Customizable Is It?**  
 Everything in this project is fully customizable! As long as you have a basic understanding of **HTML, CSS, and JavaScript,** you’ll be able to modify it easily.  
@@ -19,7 +19,7 @@ Everything in this project is fully customizable! As long as you have a basic un
 - Modify the **music player** to use your own tracks.  
 
 ## **Can You Use This for Your Own Site?**  
-Yes! This is a **static website,** meaning it has no backend functionality—so you don't have to worry about security vulnerabilities from server-side code. However, there are a few things to keep in mind:  
+Yes! This is a **static website,** meaning it has no backend functionality - so you don't have to worry about security vulnerabilities from server-side code. However, there are a few things to keep in mind:  
 
 ### **1. Music Usage & Copyright**  
 - If you’re adding music, make sure you have the **legal rights** to use it.  
