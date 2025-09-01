@@ -1,3 +1,5 @@
+# THIS REPOSITORY IS NO LONGER MAINTAINED
+https://critical.lol/ has undergone multiple updates! Check them out by clicking on this [link](https://critical.lol).
 # [https://critical.lol/](https://critical.lol) by Critical <3  
 
 ## **Overview**  
